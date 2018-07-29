@@ -1,3 +1,3 @@
 # DogBook
 
-AngularJS DogBook appliaction, based on dosAPI.
+AngularJS DogBook appliaction, based on dogs API.
