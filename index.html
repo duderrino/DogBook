@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="dogApp">
+
+<head>
+    <link data-require="bootstrap@4.1.1" data-semver="4.1.1" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <script data-require="angularjs@1.6.9" data-semver="1.6.4" src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <script src="app\services\galleryService.js"></script>
+    <script src="app\directives\imgDirective.js"></script>
+    <script src="app\controllers\galleryCtrl.js"></script>
+    <script src="app\controllers\homeCtrl.js"></script>
+    <script src="app\controllers\imagesCtrl.js"></script>
+    <script src="app\controllers\oneDogImageCtrl.js"></script>
+</head>
+
+<body>
+    <ng-view></ng-view>
+</body>
+
+</html>

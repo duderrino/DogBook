@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row text-center text-lg-left">
+        <div class="card border-dark mb-3 col-lg-3 col-md-4 col-xs-6" ng-repeat="dog in dogsArr | filter : breed">
+            <a href="javascript:void(0)" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" ng-src="{{dog.imageUrl}}" ng-click="selectDogBreed(dog)" alt="http://placehold.it/400x300">
+                <div class="card-body text-dark">
+                    <h5 class="text-center card-title" ng-click="loadDogBreed(dog.breed)">{{dog.breed}}</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

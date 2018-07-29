@@ -1,0 +1,31 @@
+<!-- Page Content -->
+<div ng-controller="galleryCtrl" ng-init="loadGallery()">
+    <header>
+        <container>
+            <div class="jumbotron text-center">
+                <h1 class="display-3 ">Dogs Book</h1>
+                <p class="lead">Man's best friend</p>
+                <div class="float-left sticky">
+                    <p>search:
+                        <input type="text" ng-model="breed">
+                    </p>
+                </div>
+                <div class="float-right">
+                    <button type="button" class="btn" ng-click="updateImage()">Update image</button>
+                </div>
+            </div>
+        </container>
+    </header>
+
+    <main>
+        <img-directive class="gallery"></img-directive>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Dudi Cohen 2018</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+</div>

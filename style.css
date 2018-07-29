@@ -1,0 +1,27 @@
+.jumbotron{
+    font-family: 'Kavoon', cursive;
+    /* position: fixed;
+    width: 100% */
+}
+
+input{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center{
+    display: block;
+    margin: 0 auto;
+    padding: 3rem;
+    border: 5px solid rgb(103, 117, 126)
+}
+
+header {
+     position: fixed; 
+     top: 0; 
+     width: 100%; 
+     z-index: 100;
+    }
+
+main{
+        margin-top: 15%;
+}
