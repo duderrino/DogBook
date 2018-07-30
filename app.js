@@ -4,7 +4,7 @@ app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/home.html',
-      controller: 'galleryCtrl'
+      controller: 'homeCtrl'
     })
     .when('/dog', {
       templateUrl: 'views/gallery.html',
