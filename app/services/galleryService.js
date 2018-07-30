@@ -5,7 +5,7 @@ app.factory('galleryService', function ($http, $q, $routeParams, $filter) {
 
     function Dog(breed, imageUrl) {
         this.breed = breed;
-        this.imageUrl = imageUrl;
+        this.imageUrl = "http://thursdaytherapy.net/wp-content/uploads/2015/11/dog-placeholder.jpg";
     }
 
     function GetAllDogs() {
@@ -40,7 +40,8 @@ app.factory('galleryService', function ($http, $q, $routeParams, $filter) {
             console.log(response);
 
             for (var i = 0; i < response.data.message.length; ++i) {
-                dogsArr.push(new Dog("", response.data.message[i]));
+                dogsArr.push(new Dog(""));
+                dogsArr[i].imageUrl =  response.data.message[i];
             }
         },
             function Error() {
@@ -65,24 +66,21 @@ app.factory('galleryService', function ($http, $q, $routeParams, $filter) {
             })
     }
 
-    function AddDogImgToArr(dogName) {
-        var imageUrl = dogName;
-        dogsArr.push(new Dog("", imageUrl));
-        dogsArr[dogsArr.length - 1].index = dogsArr.length;
-
+    function AddDogToArr(dogName) {
+        var dog = new Dog(dogName);
+        dogsArr.push(dog);
+        updateGogImage(dog);
     }
 
-    function AddDogToArr(dogName) {
-        // dogsArr.push(new Dog(dogName, ""));
-        var oneDogUrl = "https://dog.ceo/api/breed/" + dogName + "/images/random";
+    function updateGogImage(dog){
+        var oneDogUrl = "https://dog.ceo/api/breed/" + dog.breed + "/images/random";
         $http.get(oneDogUrl).then(function (response) {
-            var imageUrl = response.data.message;
-            dogsArr.push(new Dog(dogName, imageUrl));
+            dog.imageUrl = response.data.message;
         },
             function (error) {
-
-                console.log(dogName);
+                console.log(dog.breed);
             })
+
     }
 
     function getSelectedDogImage() {
