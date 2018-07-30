@@ -1,6 +1,6 @@
 app.directive("imgDirective", function () {
   return {
-    templateUrl: "../../views/imgDirective.html",
+    templateUrl: "../../views/img-directive.html",
     restrict: "EAC"
   }
 });
