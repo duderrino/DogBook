@@ -7,15 +7,15 @@ app.config(function ($routeProvider) {
       controller: 'homeCtrl'
     })
     .when('/dog', {
-      templateUrl: 'views/gallery.html',
+      templateUrl: './views/gallery.html',
       controller: 'galleryCtrl'
     })
     .when('/dog/:breed', {
-      templateUrl: 'views/images.html',
+      templateUrl: './views/images.html',
       controller: 'imagesCtrl'
     })
     .when('/image/', {
-      templateUrl: 'views/oneDogLargeImage.html',
+      templateUrl: './views/oneDogLargeImage.html',
       controller: 'oneDogImageCtrl'
     })
     .otherwise({
