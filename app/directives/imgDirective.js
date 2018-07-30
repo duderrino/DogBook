@@ -1,4 +1,4 @@
-app.directive("img-directive", function () {
+app.directive("imgDirective", function () {
   return {
     templateUrl: "../../views/img-directive.html",
     restrict: "EAC"
